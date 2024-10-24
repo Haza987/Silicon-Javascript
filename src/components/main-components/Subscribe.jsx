@@ -3,22 +3,22 @@ import React from 'react'
 function Subscribe() {
   return (
     <section id="subscribe">
-        <div class="main-container">
+        <div className="main-container">
 
-          <div class="bell">
-            {/* <img src="Images/SubImages/bell.svg" alt="bell with notification"> */}
+          <div className="bell">
+            <img src="/src/Images/SubImages/bell.svg" alt="bell with notification"></img>
           </div>
   
-          <h2 class="main-text">Subscribe to our newsletter </h2>
-          <h2 class="main-desktop-text">Subscribe to our newsletter to stay informed about latest updates</h2>
+          <h2 className="main-text">Subscribe to our newsletter </h2>
+          <h2 className="main-desktop-text">Subscribe to our newsletter to stay informed about latest updates</h2>
           
-          <div class="input">
-            <div class="input-container">
-              <i class="fa-regular fa-envelope"></i>
-              {/* <input class="form-input" type="email" name="email" id="email" required placeholder="Your email"> */}
+          <div className="input">
+            <div className="input-container">
+              <i className="fa-regular fa-envelope"></i>
+              <input className="form-input" type="email" name="email" id="email" required placeholder="Your email"></input>
             </div>
   
-            <a class="btn btn-primary bgc">Subscribe</a>
+            <a className="btn btn-primary bgc">Subscribe</a>
           </div>
         </div>
       </section>
