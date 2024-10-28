@@ -17,6 +17,7 @@
   --color-grey800: #33354D;
   --color-grey900-text: #0B0F19;
   --color-grey900: #0B0F19;
+  --color-app-bg: #0B0F19;
   --color-primary: #6366F1;
   --color-primary-hover: hsl(239, 84%, 70%);
   --color-primary-clicked: hsl(239, 84%, 63%);
@@ -47,6 +48,7 @@
   --color-grey800: #33354D;
   --color-grey900-text: #F3F6FF;
   --color-grey900: #0B0F19;
+  --color-app-bg: #ffffff;
   --color-primary: #6366F1;
   --color-primary-hover: hsl(239, 84%, 70%);
   --color-primary-clicked: hsl(239, 84%, 63%);
@@ -301,8 +303,8 @@ header .btn-mobile {
     gap: 1rem;
   }
 }
-#hero .content .downloadbuttons .app {
-  background-color: var(--color-grey900);
+#hero .content .downloadbuttons .app, #hero .content .downloadbuttons .app-dark {
+  background-color: var(--color-app-bg);
   color: var(--color-grey100-text);
   border-radius: 8px;
   padding: 12px 25px;
@@ -311,33 +313,13 @@ header .btn-mobile {
   align-items: center;
   text-decoration: none;
 }
-#hero .content .downloadbuttons .app:hover {
+#hero .content .downloadbuttons .app:hover, #hero .content .downloadbuttons .app-dark:hover {
   background-color: var(--color-primary);
   color: var(--color-grey100-text);
   text-decoration: none;
   cursor: pointer;
 }
-#hero .content .downloadbuttons .app:active {
-  background-color: var(--color-primary-clicked);
-}
-#hero .content .downloadbuttons .app-dark {
-  background-color: var(--color-grey900);
-  color: var(--color-grey100-text);
-  border-radius: 8px;
-  padding: 12px 25px;
-  height: 50px;
-  display: none;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
-}
-#hero .content .downloadbuttons .app-dark:hover {
-  background-color: var(--color-primary);
-  color: var(--color-grey100-text);
-  text-decoration: none;
-  cursor: pointer;
-}
-#hero .content .downloadbuttons .app-dark:active {
+#hero .content .downloadbuttons .appactive, #hero .content .downloadbuttons .app-darkactive {
   background-color: var(--color-primary-clicked);
 }
 #hero .content .discovermore {

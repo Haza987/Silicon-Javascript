@@ -1,4 +1,5 @@
 import React from 'react'
+import ImageSwitch from './utilities/ImageSwitch'
 
 function Hero() {
   return (
@@ -10,12 +11,8 @@ function Hero() {
 
           <div className="content">
             <p>We offer you a new generation of the mobile banking. Save, spend & manage money in your pocket.</p>
-              <div className="downloadbuttons"> 
-                <a href="https://apps.apple.com/us/app/silicon-info/id1542271266?mt=12" className="app"><img src="/src/Images/FPImages/appstore.svg" alt="app store"></img></a>
-                <a href="https://play.google.com/store/search?q=silicon&c=apps&hl=en" className="app"><img src="/src/Images/FPImages/googleplay.svg" alt="google play"></img></a>
-                <a href="https://apps.apple.com/us/app/silicon-info/id1542271266?mt=12" className="app-dark"><img src="/src/Images/FPImages/appstore-dark.svg" alt="app store"></img></a>
-                <a href="https://play.google.com/store/search?q=silicon&c=apps&hl=en" className="app-dark"><img src="/src/Images/FPImages/googleplay-dark.svg" alt="google play"></img></a>
-              </div>
+
+              <ImageSwitch />
 
               <a href="#" className="discovermore">
                 <span className="btn-circle">

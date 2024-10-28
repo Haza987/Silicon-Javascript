@@ -45,8 +45,8 @@
         gap: 1rem;
       }
 
-      .app {
-        background-color: var(--color-grey900);
+      .app, .app-dark {
+        background-color: var(--color-app-bg);
         color: var(--color-grey100-text);
         border-radius: 8px;
         padding: 12px 25px;
@@ -54,42 +54,20 @@
         justify-content: center;
         align-items: center;
         text-decoration: none;
-      }
       
-      .app:hover {
+      
+      &:hover {
         background-color: var(--color-primary);
         color: var(--color-grey100-text);
         text-decoration: none;
         cursor: pointer;
       }
       
-      .app:active{
+      &active{
         background-color: var(--color-primary-clicked);
       }
-
-      .app-dark {
-        background-color: var(--color-grey900);
-        color: var(--color-grey100-text);
-        border-radius: 8px;
-        padding: 12px 25px;
-        height: 50px;
-        display: none;
-        justify-content: center;
-        align-items: center;
-        text-decoration: none;
-      }
-      
-      .app-dark:hover {
-        background-color: var(--color-primary);
-        color: var(--color-grey100-text);
-        text-decoration: none;
-        cursor: pointer;
-      }
-      
-      .app-dark:active{
-        background-color: var(--color-primary-clicked);
-      }
-    }
+    } 
+  }
 
     .discovermore {
       grid-area: discovermore;

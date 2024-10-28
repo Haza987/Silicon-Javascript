@@ -16,6 +16,7 @@
   --color-grey800: #33354D;
   --color-grey900-text: #0B0F19;
   --color-grey900: #0B0F19;
+  --color-app-bg: #0B0F19;
   --color-primary: #6366F1;
   --color-primary-hover: hsl(239, 84%, 70%);
   --color-primary-clicked: hsl(239, 84%, 63%);
@@ -46,6 +47,7 @@
   --color-grey800: #33354D;
   --color-grey900-text: #F3F6FF;
   --color-grey900: #0B0F19;
+  --color-app-bg: #ffffff;
   --color-primary: #6366F1;
   --color-primary-hover: hsl(239, 84%, 70%);
   --color-primary-clicked: hsl(239, 84%, 63%);
