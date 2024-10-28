@@ -1,4 +1,5 @@
 import React from 'react'
+import DarkModeSwitch from './main-components/utilities/DarkModeSwitch'
 
 function Header() {
   return (
@@ -14,13 +15,7 @@ function Header() {
           <a className="nav-link" href="#">Features</a>
         </nav>
   
-        <div id="darkmode-toggle-switch" className="btn-toggle-switch">
-          <span className="label">Dark mode</span>
-          <label htmlFor="darkmode-switch" className="toggle-switch">
-            <input id="darkmode-switch" type="checkbox" />
-            <span className="slider round"></span>
-          </label>
-        </div>
+        <DarkModeSwitch />
   
         <a id="auth-signin" href="#" className="btn-primary bgc">
           <i className="fa-regular fa-user"></i>

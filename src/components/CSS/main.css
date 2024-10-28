@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
-:root {
+:root[data-theme=light] {
+  color-scheme: light;
   background-color: #ffffff;
   --color-bg: #ffffff;
   --color-header-bg: #ffffff;
@@ -28,11 +29,7 @@
   --color-hero-gradient: linear-gradient(0deg, rgba(99,102,241,0.1) 0%, rgba(218,70,239,0.05) 42%, rgba(241,244,253,0.07) 83%);
 }
 
-html {
-  color-scheme: light;
-}
-
-.dark {
+:root[data-theme=dark] {
   color-scheme: dark;
   background-color: #0B0F19;
   --color-bg: #0B0F19;
@@ -49,7 +46,7 @@ html {
   --color-grey700: #565973;
   --color-grey800: #33354D;
   --color-grey900-text: #F3F6FF;
-  --color-grey900: #ffffff;
+  --color-grey900: #0B0F19;
   --color-primary: #6366F1;
   --color-primary-hover: hsl(239, 84%, 70%);
   --color-primary-clicked: hsl(239, 84%, 63%);
