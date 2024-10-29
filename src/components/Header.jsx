@@ -1,5 +1,6 @@
 import React from 'react'
-import DarkModeSwitch from './main-components/utilities/DarkModeSwitch'
+import DarkModeSwitch from './main-components/utilities/Header/DarkModeSwitch'
+import MobileMenu from './main-components/utilities/Header/MobileMenu'
 
 function Header() {
   return (
@@ -22,9 +23,7 @@ function Header() {
           <span>Sign in / up</span>
         </a>
   
-        <button className="btn-mobile">
-          <i className="fa-solid fa-bars"></i>
-        </button>
+        <MobileMenu />
       </div>
     </header>
   )

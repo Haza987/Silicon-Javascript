@@ -1,5 +1,5 @@
 import React from 'react'
-import ImageSwitch from './utilities/ImageSwitch'
+import ImageSwitch from './utilities/Hero/ImageSwitch'
 
 function Hero() {
   return (

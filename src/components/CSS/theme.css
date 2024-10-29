@@ -1,6 +1,7 @@
 :root[data-theme=light] {
   color-scheme: light;
   background-color: #ffffff;
+  --color-app-bg: #0B0F19;
   --color-bg: #ffffff;
   --color-header-bg: #ffffff;
   --color-grey100-text: #F3F6FF;
@@ -16,8 +17,8 @@
   --color-grey800: #33354D;
   --color-grey900-text: #0B0F19;
   --color-grey900: #0B0F19;
-  --color-app-bg: #0B0F19;
-  --color-primary: #6366F1;
+  --color-menu-bg: #353e81f5;
+  --color-primary: hsl(239, 84%, 67%);
   --color-primary-hover: hsl(239, 84%, 70%);
   --color-primary-clicked: hsl(239, 84%, 63%);
   --color-error: #EF4444;
@@ -32,6 +33,7 @@
 :root[data-theme=dark] {
   color-scheme: dark;
   background-color: #0B0F19;
+  --color-app-bg: #ffffff;
   --color-bg: #0B0F19;
   --color-header-bg: #1B1F29;
   --color-grey100-text: #F3F6FF;
@@ -47,13 +49,13 @@
   --color-grey800: #33354D;
   --color-grey900-text: #F3F6FF;
   --color-grey900: #0B0F19;
-  --color-app-bg: #ffffff;
+  --color-menu-bg: #14172ef5;
   --color-primary: #6366F1;
-  --color-primary-hover: hsl(239, 84%, 70%);
-  --color-primary-clicked: hsl(239, 84%, 63%);
+  --color-primary-hover: #7274f3;
+  --color-primary-clicked: #5154f0;
   --color-error: #EF4444;
   --color-success: #22C55E;
-  --color-success-clicked: hsl(142, 71%, 40%);
+  --color-success-clicked: rgb(30, 174, 83);
   --color-warning: #FFBA08;
   --color-info: #4C82F7;
   --color-icon-background: #12162A;

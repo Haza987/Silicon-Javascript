@@ -31,3 +31,6 @@ body, section, div, header, footer, main, aside, nav, blockquote, p, span {
   height: 100vh;
 }
 
+* .no-scroll {
+  overflow: hidden;
+}
