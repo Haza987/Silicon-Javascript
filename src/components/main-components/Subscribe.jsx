@@ -1,4 +1,6 @@
 import React from 'react'
+import SubscribeInput from './utilities/Subscribe/SubscribeInput'
+
 
 function Subscribe() {
   return (
@@ -12,14 +14,8 @@ function Subscribe() {
           <h2 className="main-text">Subscribe to our newsletter </h2>
           <h2 className="main-desktop-text">Subscribe to our newsletter to stay informed about latest updates</h2>
           
-          <div className="input">
-            <div className="input-container">
-              <i className="fa-regular fa-envelope"></i>
-              <input className="form-input" type="email" name="email" id="email" required placeholder="Your email"></input>
-            </div>
-  
-            <a className="btn btn-primary bgc">Subscribe</a>
-          </div>
+          <SubscribeInput />
+
         </div>
       </section>
   )

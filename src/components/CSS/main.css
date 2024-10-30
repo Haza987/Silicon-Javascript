@@ -1197,6 +1197,7 @@ header .navigation .nav-link:hover {
   padding: var(--container-padding);
   font-size: 16px;
   font-weight: 600;
+  border: none;
 }
 
 @media (min-width: 768px) {
