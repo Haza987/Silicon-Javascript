@@ -1,0 +1,31 @@
+.breadcrumb-container {
+  background: var(--color-breadcrumb-gradient);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.breadcrumb-link {
+  text-decoration: none;
+  color: inherit;
+  outline: none;
+  
+  &:hover {
+    color: var(--color-primary-hover);
+  }
+
+  i {
+    margin-inline: .3rem;
+  }
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  gap: 2rem;
+  
+}

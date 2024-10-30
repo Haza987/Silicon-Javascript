@@ -1,33 +1,23 @@
-import React from 'react'
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+import Home from "./views/Home"
+import Contact from "./views/Contact"
 import Header from './components/Header'
-import Hero from './components/main-components/Hero'
-import Brands from './components/main-components/Brands'
-import Features from './components/main-components/Features'
-import HDIW from './components/main-components/HDIW'
-import Info from './components/main-components/Info'
-import Review from './components/main-components/Review'
-import Faq from './components/main-components/Faq'
-import Subscribe from './components/main-components/Subscribe'
-import Footer from './components/Footer'
+import Footer from './components/Footer' 
+import Features from "./views/Features"
 
 const App = () => {
   return (
-  <>
-  <Header />
-
-  <main>
-    <Hero />
-    <Brands />
-    <Features />
-    <HDIW />
-    <Info />
-    <Review />
-    <Faq />
-    <Subscribe />
-  </main>
-
-  <Footer />
-  </>
+  <BrowserRouter>
+    <Header />
+      <main>
+        <Routes>
+          <Route path="/" element={<Home/>}/>
+          <Route path="/contact" element={<Contact/>}/>
+          <Route path="/features" element={<Features/>}/>
+        </Routes> 
+      </main>
+    <Footer />
+  </BrowserRouter>
 
   )
 }

@@ -1,6 +1,7 @@
 import React from 'react'
 import DarkModeSwitch from './main-components/utilities/Header/DarkModeSwitch'
 import MobileMenu from './main-components/utilities/Header/MobileMenu'
+import { Link, NavLink } from 'react-router-dom'
 
 function Header() {
   return (
@@ -8,12 +9,16 @@ function Header() {
       <div className="header-container">
         
         <div className="logo">
-          <a id="logo" href="#"><img src="/src/Images/FPImages/Logo.svg" alt="Silicon Logo"></img></a>
-          <h3>Silicon</h3>
+          <Link id="logo" to="/">
+          <img src="/src/Images/FPImages/Logo.svg" alt="Silicon Logo"></img>
+          </Link>
+          <NavLink className="nav-link logo-text" to="/">Silicon</NavLink> 
+          
         </div>
     
         <nav className="navbar">
-          <a className="nav-link" href="#">Features</a>
+          <NavLink className="nav-link" to="/features">Features</NavLink>
+          <NavLink className="nav-link" to="/contact">Contact</NavLink>
         </nav>
   
         <DarkModeSwitch />

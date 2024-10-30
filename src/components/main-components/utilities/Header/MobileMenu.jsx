@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { NavLink } from 'react-router-dom'
 
 const MobileMenu = () => {
 
@@ -26,9 +27,9 @@ const MobileMenu = () => {
         <div className="menu-container">
           <nav className={`${showMenu ? 'show' : ''}`}>
             <div className="nav-links">
-              <p>Home</p>
-              <p>Features</p>
-              <p>Contact</p>
+              <NavLink className="nav-link" to="/">Home</NavLink>
+              <NavLink className="nav-link" to="/features">Features</NavLink>
+              <NavLink className="nav-link" to="/contact">Contact</NavLink>
             </div>
           </nav>
         </div>

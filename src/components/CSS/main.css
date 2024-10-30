@@ -60,6 +60,7 @@
   --color-warning: #FFBA08;
   --color-info: #4C82F7;
   --color-icon-background: #12162A;
+  --color-breadcrumb-gradient: linear-gradient(to top, rgba(11,15,25,0.1) 0%, rgba(218,70,239,0.05) 42%, rgba(27,31,41,1) 83%);
   --color-hero-gradient: linear-gradient(to top, rgba(99, 102, 241, 0.1) 0%, rgba(218, 70, 239, 0.05) 42%, rgba(241, 244, 253, 0.07) 83%), #0b0f19;
 }
 
@@ -118,6 +119,35 @@ body {
   background-color: var(--color-primary-clicked);
 }
 
+.breadcrumb-container {
+  background: var(--color-breadcrumb-gradient);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.breadcrumb-link {
+  text-decoration: none;
+  color: inherit;
+  outline: none;
+}
+.breadcrumb-link:hover {
+  color: var(--color-primary-hover);
+}
+.breadcrumb-link i {
+  margin-inline: 0.3rem;
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  gap: 2rem;
+}
+
 header {
   /* logo */
   /* end of logo */
@@ -140,7 +170,7 @@ header .header-container {
   grid-template-columns: 1fr auto auto;
   gap: 2rem;
   padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding-bottom: 2rem;
 }
 header .logo {
   display: flex;
@@ -148,7 +178,11 @@ header .logo {
   gap: 0.5em;
   z-index: 1001;
 }
-header .logo h3 {
+header .logo .logo-text {
+  text-decoration: none;
+  font-size: 19px;
+  color: inherit;
+  outline: none;
   font-weight: 800;
 }
 header .navbar {
@@ -158,6 +192,7 @@ header .navbar .nav-link {
   color: var(--color-grey900-text);
   font-weight: 600;
   text-decoration: none;
+  margin: 1rem;
 }
 header .navbar .nav-link:hover {
   color: var(--color-primary);
@@ -261,8 +296,8 @@ header .navigation .show {
 }
 header .navigation .nav-links {
   display: flex;
-  flex-direction: column; /* Arranges links vertically */
-  align-items: center; /* Centers horizontally */
+  flex-direction: column;
+  align-items: center;
   color: white;
   gap: 5rem;
   font-size: 1.5rem;
@@ -270,6 +305,14 @@ header .navigation .nav-links {
 }
 header .navigation .nav-links p:hover {
   cursor: pointer;
+  color: var(--color-primary-hover);
+}
+header .navigation .nav-link {
+  text-decoration: none;
+  color: inherit;
+  outline: none;
+}
+header .navigation .nav-link:hover {
   color: var(--color-primary-hover);
 }
 
@@ -290,7 +333,7 @@ header .navigation .nav-links p:hover {
     margin: var(--desktop-margin);
     grid-template-columns: auto 1fr auto auto;
     gap: 3rem;
-    padding-bottom: 8rem;
+    padding-bottom: 3rem;
   }
   header {
     background-color: var(--color-header-bg);
