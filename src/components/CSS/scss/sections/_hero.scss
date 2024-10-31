@@ -69,6 +69,19 @@
     } 
   }
 
+    .discover-more-container {
+      position: relative;
+
+      @media (min-width: 768px) {
+        left: -2.5rem;
+      }
+
+      @media (min-width: 1400px) {
+        left: 5rem;
+        bottom: 4.5rem;
+      }
+    }
+
     .discovermore {
       grid-area: discovermore;
       color: var(--color-grey700-text);
@@ -164,7 +177,7 @@
     }
 
     .discovermore {
-      justify-content: flex-start;
+      justify-content: right;
     }
 
     .images{

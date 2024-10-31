@@ -127,6 +127,7 @@ body {
   align-items: center;
   gap: 2rem;
   padding: 2rem;
+  margin-bottom: 1rem;
 }
 
 .breadcrumb-link {
@@ -412,6 +413,20 @@ header .navigation .nav-link:hover {
 #hero .content .downloadbuttons .appactive, #hero .content .downloadbuttons .app-darkactive {
   background-color: var(--color-primary-clicked);
 }
+#hero .content .discover-more-container {
+  position: relative;
+}
+@media (min-width: 768px) {
+  #hero .content .discover-more-container {
+    left: -2.5rem;
+  }
+}
+@media (min-width: 1400px) {
+  #hero .content .discover-more-container {
+    left: 5rem;
+    bottom: 4.5rem;
+  }
+}
 #hero .content .discovermore {
   grid-area: discovermore;
   color: var(--color-grey700-text);
@@ -489,7 +504,7 @@ header .navigation .nav-link:hover {
     width: 250px;
   }
   #hero .discovermore {
-    justify-content: flex-start;
+    justify-content: right;
   }
   #hero .images {
     display: block;
@@ -763,6 +778,8 @@ header .navigation .nav-link:hover {
 #info .top-section .list {
   grid-area: list;
   list-style: none;
+  display: flex;
+  flex-direction: column;
 }
 #info .top-section .list-item {
   margin-bottom: 1.5rem;
@@ -1158,11 +1175,29 @@ header .navigation .nav-link:hover {
 }
 #subscribe .input {
   display: flex;
+  flex-direction: column;
   grid-area: input;
+  position: relative;
 }
 #subscribe .input-container {
   position: relative;
-  display: inline-block;
+  display: flex;
+}
+#subscribe .error-message {
+  position: absolute;
+  top: 100%;
+  left: 1%;
+  color: var(--color-error);
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+}
+#subscribe .success-message {
+  position: absolute;
+  top: 100%;
+  left: 1%;
+  color: var(--color-success);
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
 }
 #subscribe .input-container i {
   position: absolute;

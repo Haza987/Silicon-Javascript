@@ -26,6 +26,8 @@
     .list{
       grid-area: list;
       list-style: none;
+      display: flex;
+      flex-direction: column;
     }
 
     .list-item {

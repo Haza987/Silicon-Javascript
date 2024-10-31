@@ -9,6 +9,10 @@ const MobileMenu = () => {
     setShowMenu(!showMenu)
   }
 
+  const closeMenu = () => {
+    setShowMenu(false)
+  }
+
   useEffect(() => {
     if(showMenu) {
       document.body.classList.add('no-scroll')
@@ -27,9 +31,9 @@ const MobileMenu = () => {
         <div className="menu-container">
           <nav className={`${showMenu ? 'show' : ''}`}>
             <div className="nav-links">
-              <NavLink className="nav-link" to="/">Home</NavLink>
-              <NavLink className="nav-link" to="/features">Features</NavLink>
-              <NavLink className="nav-link" to="/contact">Contact</NavLink>
+              <NavLink className="nav-link" to="/" onClick={closeMenu}>Home</NavLink>
+              <NavLink className="nav-link" to="/features" onClick={closeMenu}>Features</NavLink>
+              <NavLink className="nav-link" to="/contact" onClick={closeMenu}>Contact</NavLink>
             </div>
           </nav>
         </div>

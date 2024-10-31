@@ -13,13 +13,15 @@ function Hero() {
             <p>We offer you a new generation of the mobile banking. Save, spend & manage money in your pocket.</p>
 
               <ImageSwitch />
-
-              <a href="#" className="discovermore">
-                <span className="btn-circle">
-                  <i className="fa-solid fa-chevron-down"></i>
-                </span>
-                  <span>Discover more</span>
-              </a>
+              
+              <div className="discover-more-container">
+                <a href="#" className="discovermore">
+                  <span className="btn-circle">
+                    <i className="fa-solid fa-chevron-down"></i>
+                  </span>
+                    <span>Discover more</span>
+                </a>
+              </div>
           </div>
 
           <div className="images">

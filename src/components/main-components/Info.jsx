@@ -8,9 +8,9 @@ function Info() {
             <h2 className="headline-top">Make your money transfer simple and clear</h2>
             
             <ul className="list">
-              <li className="list-item">{/* <img className="tick" src="/src/Images/InfImages/tick.svg" alt="tick">*/}Banking transactions are free for you</li>
-              <li className="list-item">{/* <img className="tick" src="/src/Images/InfImages/tick.svg" alt="tick">*/}No monthly cash commission</li>
-              <li className="list-item">{/* <img className="tick" src="/src/Images/InfImages/tick.svg" alt="tick">*/}Manage payments and transactions online</li>
+              <li className="list-item"><img className="tick" src="/src/Images/InfImages/tick.svg" alt="tick"/>Banking transactions are free for you</li>
+              <li className="list-item"><img className="tick" src="/src/Images/InfImages/tick.svg" alt="tick"/>No monthly cash commission</li>
+              <li className="list-item"><img className="tick" src="/src/Images/InfImages/tick.svg" alt="tick"/>Manage payments and transactions online</li>
             </ul>
   
             <div className="right-images">
