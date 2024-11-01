@@ -4,20 +4,23 @@
   padding-top: 3rem;
   padding-bottom: 3rem;
   margin: 1rem;
-
   background-color: var(--color-bg);
+  
+  
 
   .header{
     grid-area: header;
     font-size: 25px;
     font-weight: 800;
     padding-bottom: 2rem;
+    
   }
 
   .desktop-header{
     grid-area: d-header;
     display: none;
     text-align: left;
+    
   }
 
   .undertext {
@@ -25,6 +28,7 @@
     font-size: 18px;
     color: var(--color-grey500);
     margin-bottom: 3rem;
+    
   }
 
   .cards {
@@ -32,6 +36,7 @@
     grid-area: cards;
     margin-bottom: 2rem;
     gap: 2rem;
+    
 
     .phone {    
       width: 343px;
@@ -39,133 +44,168 @@
       padding: var(--container-padding);
       padding: 2rem;
       text-align: left;
+      
 
-      span{
+      .nav-link{
         color: var(--color-primary);
+        font-weight: 600;
+        text-decoration: none;
+        
       }
-
-      span:active {
+      
+      .nav-link:hover {
         color: var(--color-primary-clicked);
+        text-decoration: underline;
+        
       }
     }
-  
+
     .chat {
       width: 343px;
       border: 1px solid var(--color-grey300);
       padding: var(--container-padding);
       padding: 2rem;
       text-align: left;
+      
 
-      span{
+      .nav-link{
         color: var(--color-success);
+        font-weight: 600;
+        text-decoration: none;
+        
       }
-
-      span:active {
+      
+      .nav-link:hover {
         color: var(--color-success-clicked);
+        text-decoration: underline;
+        
       }
     }
 
     p{
       padding: 1rem 0;
+      
     }
 
     span{
       font-weight: 600;
+      
     }
 
     span:hover{
       cursor: pointer;
       text-decoration: underline;
+      
     }
   }
-
-  .questions {
-    grid-area: questions;
-    padding-bottom: 3rem;
-  }
-
-  .closed {
-    display: grid;
-    grid-template-columns: 6fr 1fr;
-    grid-template-areas: "question button";
-
-    height: 75px;
-    border: 1px solid var(--color-grey300);
-    align-items: center;
-    padding: var(--container-padding);
-    gap: 1rem;
-        
-    h6{
-      grid-area: question;
-      font-size: .9rem;
-      text-align: left;
-    }
-
-    .btn-circle {
-      grid-area: button;
-    }
-
-  }
-  
-  .closed:hover {
-    cursor: pointer;
-    text-decoration: underline;
-  }
-
-  .answer{
-    border: 1px solid var(--color-grey300);
-    padding: 1.5rem;
-    text-align: left;
-    font-size: 14px;
-    color: var(--color-grey600-text);
-  }
-
-  .faq1 {
-    display: none;
-  }
-
-  .faq3-open {
-    display: none;
-  }
-
-  .btn-circle {
-    height: 36px;
-    width: 36px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    border: 1px solid var(--color-grey300);
-    background-color: var(--color-grey100);
-    color: var(--color-grey900-text);
-    
-  }
-  
-  .open {
-  background-color: var(--color-primary);
-  color: white;
-}
 
   .contactus {
     grid-area: contact;
+    
+  }
 
-    position: absolute;
-    left: 50%; 
-    bottom: 20px;
-    transform: translateX(-50%);
-    border-radius: 8px;
-    padding: 12px 25px;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: 600;
-  } 
+  .faq-test{
+
+    grid-area: faq;
+    
+  
+    .faqCard {
+        padding-bottom: 3rem;
+        
+    }
+    
+    .question{
+      display: grid;
+      grid-template-columns: 6fr 1fr;
+      grid-template-areas: "question button";
+      cursor: pointer;
+      height: 75px;
+      border: 1px solid var(--color-grey300);
+      align-items: center;
+      padding: var(--container-padding);
+      gap: 1rem;
+      
+
+    
+      p{
+        grid-area: question;
+        font-size: .9rem;
+        text-align: left;
+        font-weight: 600 ;
+        
+      }
+    
+      .btn-round {
+        cursor: pointer;
+        grid-area: button;
+        height: 36px;
+        width: 36px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        border: 1px solid var(--color-grey300);
+        background-color: var(--color-grey100);
+        color: var(--color-grey900-text);
+        transition: all 300ms;
+        
+      }
+    }
+    
+    .question:hover p{
+      text-decoration: underline;
+      
+    
+    }
+    
+    .question:hover .btn-round{
+      background-color: var(--color-primary);
+      color: white;
+      
+    }
+    
+    .open .btn-round{
+      background-color: #6366f1;
+      transform: rotate(180deg);
+      color: white;
+      
+    }
+
+    .answer {
+
+      display: grid;
+      grid-template-rows: 0fr;
+      overflow: hidden;
+
+      transition: grid-template-rows 300ms, padding 300ms;
+      padding-inline: 1rem ;
+
+      border: 1px solid var(--color-grey300);
+      text-align: left;
+      font-size: 14px;
+      color: var(--color-grey600-text);
+      
+    }
+    
+    .open .answer {
+      transition: grid-template-rows 300ms, padding-bottom 300ms;
+
+      grid-template-rows: 1fr;
+      padding: 1rem;
+    }
+    
+    .expandable {
+      min-height: 0px;
+      
+    
+    }
+  }
 }
+
+
 
 @media (min-width: 768px) {
   #faq {
-
     max-width: var(--tablet-width);
     margin: var(--tablet-margin);
     display: grid;
@@ -173,24 +213,8 @@
     grid-template-areas: 
     "header"
     "text"
-    "questions"
+    "faq"
     "cards";
-
-    .faq1 {
-      display: grid;
-    }
-
-    .faq1-open {
-      display: none;
-    }
-
-    .faq3 {
-      display: none;
-    }
-
-    .faq3-open {
-      display: grid;
-    }
 
     .cards {
       display: flex;
@@ -206,13 +230,14 @@
    #faq {
     max-width: var(--desktop-width);
     margin: var(--desktop-margin);
+    height: 675px;
     display: grid;
     grid-template-columns: 1fr 2fr;
     grid-template-areas: 
-    "d-header questions"
-    "text questions"
-    "cards questions"
-    "empty questions";
+    "d-header faq"
+    "text faq"
+    "cards faq"
+    "empty faq";
     gap: 2rem;
 
     .cards {

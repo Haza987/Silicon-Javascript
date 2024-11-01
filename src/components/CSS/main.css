@@ -999,11 +999,14 @@ header .navigation .nav-link:hover {
   padding: 2rem;
   text-align: left;
 }
-#faq .cards .phone span {
+#faq .cards .phone .nav-link {
   color: var(--color-primary);
+  font-weight: 600;
+  text-decoration: none;
 }
-#faq .cards .phone span:active {
+#faq .cards .phone .nav-link:hover {
   color: var(--color-primary-clicked);
+  text-decoration: underline;
 }
 #faq .cards .chat {
   width: 343px;
@@ -1012,11 +1015,14 @@ header .navigation .nav-link:hover {
   padding: 2rem;
   text-align: left;
 }
-#faq .cards .chat span {
+#faq .cards .chat .nav-link {
   color: var(--color-success);
+  font-weight: 600;
+  text-decoration: none;
 }
-#faq .cards .chat span:active {
+#faq .cards .chat .nav-link:hover {
   color: var(--color-success-clicked);
+  text-decoration: underline;
 }
 #faq .cards p {
   padding: 1rem 0;
@@ -1028,46 +1034,35 @@ header .navigation .nav-link:hover {
   cursor: pointer;
   text-decoration: underline;
 }
-#faq .questions {
-  grid-area: questions;
+#faq .contactus {
+  grid-area: contact;
+}
+#faq .faq-test {
+  grid-area: faq;
+}
+#faq .faq-test .faqCard {
   padding-bottom: 3rem;
 }
-#faq .closed {
+#faq .faq-test .question {
   display: grid;
   grid-template-columns: 6fr 1fr;
   grid-template-areas: "question button";
+  cursor: pointer;
   height: 75px;
   border: 1px solid var(--color-grey300);
   align-items: center;
   padding: var(--container-padding);
   gap: 1rem;
 }
-#faq .closed h6 {
+#faq .faq-test .question p {
   grid-area: question;
   font-size: 0.9rem;
   text-align: left;
+  font-weight: 600;
 }
-#faq .closed .btn-circle {
-  grid-area: button;
-}
-#faq .closed:hover {
+#faq .faq-test .question .btn-round {
   cursor: pointer;
-  text-decoration: underline;
-}
-#faq .answer {
-  border: 1px solid var(--color-grey300);
-  padding: 1.5rem;
-  text-align: left;
-  font-size: 14px;
-  color: var(--color-grey600-text);
-}
-#faq .faq1 {
-  display: none;
-}
-#faq .faq3-open {
-  display: none;
-}
-#faq .btn-circle {
+  grid-area: button;
   height: 36px;
   width: 36px;
   display: flex;
@@ -1077,24 +1072,38 @@ header .navigation .nav-link:hover {
   border: 1px solid var(--color-grey300);
   background-color: var(--color-grey100);
   color: var(--color-grey900-text);
+  transition: all 300ms;
 }
-#faq .open {
+#faq .faq-test .question:hover p {
+  text-decoration: underline;
+}
+#faq .faq-test .question:hover .btn-round {
   background-color: var(--color-primary);
   color: white;
 }
-#faq .contactus {
-  grid-area: contact;
-  position: absolute;
-  left: 50%;
-  bottom: 20px;
-  transform: translateX(-50%);
-  border-radius: 8px;
-  padding: 12px 25px;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
+#faq .faq-test .open .btn-round {
+  background-color: #6366f1;
+  transform: rotate(180deg);
+  color: white;
+}
+#faq .faq-test .answer {
+  display: grid;
+  grid-template-rows: 0fr;
+  overflow: hidden;
+  transition: grid-template-rows 300ms, padding 300ms;
+  padding-inline: 1rem;
+  border: 1px solid var(--color-grey300);
+  text-align: left;
   font-size: 14px;
-  font-weight: 600;
+  color: var(--color-grey600-text);
+}
+#faq .faq-test .open .answer {
+  transition: grid-template-rows 300ms, padding-bottom 300ms;
+  grid-template-rows: 1fr;
+  padding: 1rem;
+}
+#faq .faq-test .expandable {
+  min-height: 0px;
 }
 
 @media (min-width: 768px) {
@@ -1103,19 +1112,7 @@ header .navigation .nav-link:hover {
     margin: var(--tablet-margin);
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-areas: "header" "text" "questions" "cards";
-  }
-  #faq .faq1 {
-    display: grid;
-  }
-  #faq .faq1-open {
-    display: none;
-  }
-  #faq .faq3 {
-    display: none;
-  }
-  #faq .faq3-open {
-    display: grid;
+    grid-template-areas: "header" "text" "faq" "cards";
   }
   #faq .cards {
     display: flex;
@@ -1128,9 +1125,10 @@ header .navigation .nav-link:hover {
   #faq {
     max-width: var(--desktop-width);
     margin: var(--desktop-margin);
+    height: 675px;
     display: grid;
     grid-template-columns: 1fr 2fr;
-    grid-template-areas: "d-header questions" "text questions" "cards questions" "empty questions";
+    grid-template-areas: "d-header faq" "text faq" "cards faq" "empty faq";
     gap: 2rem;
   }
   #faq .cards {
