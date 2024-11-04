@@ -1,6 +1,6 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
-import Questions from './utilities/FAQ/Questions'
+import QuestionsBlock from './utilities/FAQ/QuestionsBlock'
 
 function Faq() {
   return (
@@ -28,7 +28,7 @@ function Faq() {
         </div>
       </div>
 
-      <Questions />
+      <QuestionsBlock />
 
       <NavLink to="/contact"><button className='contactus bgc'> Contact us now</button></NavLink>
     </section>
