@@ -877,78 +877,49 @@ header .navigation .nav-link:hover {
   grid-auto-rows: minmax(100px auto);
   grid-template-columns: 1fr 1fr 1fr;
   gap: 5rem;
-  grid-template-areas: "headline card1 card2";
+  grid-template-areas: "headline card card";
 }
 #review .main-container h1 {
   grid-area: headline;
   font-size: 40px;
   font-weight: 800;
 }
-#review .main-container .card1 {
-  grid-area: card1;
+#review .main-container .card-container {
+  grid-area: card;
+  display: flex;
+  gap: 2rem;
+}
+#review .main-container .card-container .card {
   position: relative;
-  border: 1px;
+  border: 1px solid var(--color-primary);
   border-radius: 0.5rem;
   background-color: var(--color-bg);
   box-shadow: -10px 10px 10px rgba(0, 0, 0, 0.1);
 }
-#review .main-container .card1 .quotemark {
+#review .main-container .card-container .card .quotemark {
   position: absolute;
   top: -25px;
 }
-#review .main-container .card1 .stars {
-  padding: 2.5rem 1.5rem 0rem 1.5rem;
-}
-#review .main-container .card1 .text {
-  padding: 1.5rem 1.5rem;
-  color: var(--color-grey700-text);
-  font-weight: 100;
-}
-#review .main-container .card1 .reviewer {
-  padding-inline: 1.5rem;
-  padding-bottom: 0.5rem;
-  color: var(--color-grey900-text);
-}
-#review .main-container .card2 {
-  grid-area: card2;
-  position: relative;
-  border: 1px;
-  border-radius: 0.5rem;
-  background-color: var(--color-bg);
-  box-shadow: -10px 10px 10px rgba(0, 0, 0, 0.1);
-}
-#review .main-container .card2 .quotemark {
-  position: absolute;
-  top: -25px;
-}
-#review .main-container .card2 .stars {
-  padding: 2.5rem 1.5rem 0rem 1.5rem;
-}
-#review .main-container .card2 .text {
-  padding: 1.5rem 1.5rem;
-  color: var(--color-grey700-text);
-  font-weight: 100;
-}
-#review .main-container .card2 .reviewer {
-  padding-inline: 1.5rem;
-  padding-bottom: 0.5rem;
-  color: var(--color-grey900-text);
-}
-#review .main-container .stars .fa-solid {
+#review .main-container .card-container .card .star-rating {
   color: var(--color-warning);
+  padding: 2.5rem 1.5rem 0rem 1.5rem;
 }
-#review .main-container .stars .fa-regular {
-  color: var(--color-grey500);
+#review .main-container .card-container .card .text {
+  padding: 1.5rem 1.5rem;
+  color: var(--color-grey700-text);
+  font-weight: 400;
 }
-#review .main-container p {
-  color: var(--color-grey700);
-}
-#review .main-container .reviewer {
+#review .main-container .card-container .card .reviewer {
   display: flex;
   gap: 1rem;
 }
-#review .main-container .reviewer .job {
+#review .main-container .card-container .card .reviewer .job {
   color: var(--color-grey600);
+}
+#review .main-container .card-container .card .reviewer {
+  padding-inline: 1.5rem;
+  padding-bottom: 0.5rem;
+  color: var(--color-grey900-text);
 }
 
 #review .main-container {
@@ -1037,13 +1008,13 @@ header .navigation .nav-link:hover {
 #faq .contactus {
   grid-area: contact;
 }
-#faq .faq-test {
+#faq .faq-block {
   grid-area: faq;
 }
-#faq .faq-test .faqCard {
+#faq .faq-block .faqCard {
   padding-bottom: 3rem;
 }
-#faq .faq-test .question {
+#faq .faq-block .question {
   display: grid;
   grid-template-columns: 6fr 1fr;
   grid-template-areas: "question button";
@@ -1054,13 +1025,13 @@ header .navigation .nav-link:hover {
   padding: var(--container-padding);
   gap: 1rem;
 }
-#faq .faq-test .question p {
+#faq .faq-block .question p {
   grid-area: question;
   font-size: 0.9rem;
   text-align: left;
   font-weight: 600;
 }
-#faq .faq-test .question .btn-round {
+#faq .faq-block .question .btn-round {
   cursor: pointer;
   grid-area: button;
   height: 36px;
@@ -1074,19 +1045,19 @@ header .navigation .nav-link:hover {
   color: var(--color-grey900-text);
   transition: all 300ms;
 }
-#faq .faq-test .question:hover p {
+#faq .faq-block .question:hover p {
   text-decoration: underline;
 }
-#faq .faq-test .question:hover .btn-round {
+#faq .faq-block .question:hover .btn-round {
   background-color: var(--color-primary);
   color: white;
 }
-#faq .faq-test .open .btn-round {
+#faq .faq-block .open .btn-round {
   background-color: #6366f1;
   transform: rotate(180deg);
   color: white;
 }
-#faq .faq-test .answer {
+#faq .faq-block .answer {
   display: grid;
   grid-template-rows: 0fr;
   overflow: hidden;
@@ -1097,12 +1068,12 @@ header .navigation .nav-link:hover {
   font-size: 14px;
   color: var(--color-grey600-text);
 }
-#faq .faq-test .open .answer {
+#faq .faq-block .open .answer {
   transition: grid-template-rows 300ms, padding-bottom 300ms;
   grid-template-rows: 1fr;
   padding: 1rem;
 }
-#faq .faq-test .expandable {
+#faq .faq-block .expandable {
   min-height: 0px;
 }
 

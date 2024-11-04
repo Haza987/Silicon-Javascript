@@ -10,7 +10,7 @@
     grid-auto-rows: minmax(100px auto);
     grid-template-columns: 1fr 1fr 1fr;
     gap: 5rem;
-    grid-template-areas: "headline card1 card2";
+    grid-template-areas: "headline card card";
 
     h1{
       grid-area: headline;
@@ -18,89 +18,50 @@
       font-weight: 800;
     }
   
-    .card1 {
-      grid-area: card1;
-      position: relative;
-      border: 1px;
-      border-radius: .5rem;
-      background-color: var(--color-bg);
-      
-      box-shadow: -10px 10px 10px rgba(0, 0, 0, 0.1);
-  
-      .quotemark {
-        position: absolute;
-        top: -25px;
-      }
-  
-      .stars {
-        padding: 2.5rem 1.5rem 0rem 1.5rem;   
-      }
-  
-      .text {
-        padding: 1.5rem 1.5rem;
-        color: var(--color-grey700-text);
-        font-weight: 100;
-      }
-  
-      .reviewer{
-        padding-inline: 1.5rem;
-        padding-bottom: .5rem;  
-        color: var(--color-grey900-text);
-      }
-    }
-  
-    .card2 {
-      grid-area: card2;
-      position: relative;
-      border: 1px;
-      border-radius: .5rem;
-      background-color: var(--color-bg);
+    .card-container {
 
-      box-shadow: -10px 10px 10px rgba(0, 0, 0, 0.1);
-
-      .quotemark {
-        position: absolute;
-        top: -25px;
-      }
-
-      .stars {
-        padding: 2.5rem 1.5rem 0rem 1.5rem;   
-      }
-
-      .text {
-        padding: 1.5rem 1.5rem;
-        color: var(--color-grey700-text);
-        font-weight: 100;     
-      }
-
-      .reviewer{
-        padding-inline: 1.5rem;
-        padding-bottom: .5rem;  
-        color: var(--color-grey900-text);
-      }
-    }
-
-    .stars {
-
-    .fa-solid {
-        color: var(--color-warning);
-      }
-
-      .fa-regular {
-        color: var(--color-grey500);
-      }
-    }
-
-    p {
-      color: var(--color-grey700);
-    }
-
-    .reviewer {
+      grid-area: card;
       display: flex;
-      gap: 1rem;
+      gap: 2rem;
+      .card {
 
-      .job {
-        color: var(--color-grey600);
+        position: relative;
+        border: 1px solid var(--color-primary);
+        border-radius: .5rem;
+        background-color: var(--color-bg);
+        
+        box-shadow: -10px 10px 10px rgba(0, 0, 0, 0.1);
+    
+        .quotemark {
+          position: absolute; 
+          top: -25px; 
+        }
+     
+        .star-rating {
+          color: var(--color-warning); 
+          padding: 2.5rem 1.5rem 0rem 1.5rem;    
+        }
+    
+        .text {
+          padding: 1.5rem 1.5rem;
+          color: var(--color-grey700-text);
+          font-weight: 400;
+        }
+      
+          .reviewer {
+            display: flex;
+            gap: 1rem;
+      
+            .job {
+              color: var(--color-grey600);
+            }
+          }
+
+        .reviewer{
+          padding-inline: 1.5rem;
+          padding-bottom: .5rem;  
+          color: var(--color-grey900-text);
+        }
       }
     }
   }

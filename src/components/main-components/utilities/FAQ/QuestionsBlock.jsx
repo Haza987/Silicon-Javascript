@@ -22,7 +22,7 @@ const QuestionsBlock = () => {
 
 
   return (
-    <section className='faq-test'>
+    <section className='faq-block'>
       {questionItems.map((item, index) => (
         <div key={item.id} className={`faq-card ${openIndex === index ? 'open' : ''}`} onClick={() => toggleOpen(index)} >
           <div className="question">
