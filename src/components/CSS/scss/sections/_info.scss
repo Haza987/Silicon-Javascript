@@ -1,5 +1,5 @@
 #info {
-  background-color: var(--color-bg);
+  background: var(--background-gradient-two);
 
   display: none;
   padding-top: 5rem;
@@ -96,8 +96,7 @@
     }
   }
 
-  .learn-more {
-    
+  .learn-more {   
     border-radius: 8px;
     padding: 12px 25px;
     display: flex;

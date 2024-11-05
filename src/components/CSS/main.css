@@ -4,7 +4,7 @@
   background-color: #ffffff;
   --color-app-bg: #0B0F19;
   --color-bg: #ffffff;
-  --color-header-bg: #ffffff;
+  --color-header-bg: #efeffd;
   --color-grey100-text: #F3F6FF;
   --color-grey100: #F3F6FF;
   --color-grey200: #EFF2FC;
@@ -27,8 +27,10 @@
   --color-success-clicked: hsl(142, 71%, 40%);
   --color-warning: #FFBA08;
   --color-info: #4C82F7;
-  --color-icon-background: #F3F3FE;
-  --color-hero-gradient: linear-gradient(0deg, rgba(99,102,241,0.1) 0%, rgba(218,70,239,0.05) 42%, rgba(241,244,253,0.07) 83%);
+  --color-icon-background: #e8e8f5;
+  --color-breadcrumb-gradient: linear-gradient(to top, rgba(11,15,25,0.1) 0%, rgba(218,70,239,0.05) 42%, rgba(27,31,41,1) 83%);
+  --background-gradient-one: linear-gradient(to top, rgba(99,102,241,0.1) 0%, rgba(218,70,239,0.05) 42%, rgba(241,244,253,0.07) 83%);
+  --background-gradient-two: linear-gradient(to bottom, rgba(99,102,241,0.1) 0%, rgba(218,70,239,0.05) 42%, rgba(241,244,253,0.07) 83%);
 }
 
 :root[data-theme=dark] {
@@ -36,7 +38,7 @@
   background-color: #0B0F19;
   --color-app-bg: #ffffff;
   --color-bg: #0B0F19;
-  --color-header-bg: #1B1F29;
+  --color-header-bg: #0b0f19;
   --color-grey100-text: #F3F6FF;
   --color-grey100: #151822;
   --color-grey200: #EFF2FC;
@@ -59,9 +61,10 @@
   --color-success-clicked: rgb(30, 174, 83);
   --color-warning: #FFBA08;
   --color-info: #4C82F7;
-  --color-icon-background: #12162A;
+  --color-icon-background: #171c36;
   --color-breadcrumb-gradient: linear-gradient(to top, rgba(11,15,25,0.1) 0%, rgba(218,70,239,0.05) 42%, rgba(27,31,41,1) 83%);
-  --color-hero-gradient: linear-gradient(to top, rgba(99, 102, 241, 0.1) 0%, rgba(218, 70, 239, 0.05) 42%, rgba(241, 244, 253, 0.07) 83%), #0b0f19;
+  --background-gradient-one: linear-gradient(to top, rgba(11,15,25,1) 0%, rgba(218,70,239,0.05) 50%, rgba(20,23,46,1) 100%);
+  --background-gradient-two: linear-gradient(to bottom, rgba(11,15,25,1) 0%, rgba(218,70,239,0.05) 50%, rgba(20,23,46,1) 100%);
 }
 
 :root {
@@ -120,14 +123,14 @@ body {
 }
 
 .breadcrumb-container {
-  background: var(--color-breadcrumb-gradient);
+  background: var(--color-header-bg);
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: left;
   gap: 2rem;
-  padding: 2rem;
-  margin-bottom: 1rem;
+  padding-left: 7.5rem;
+  padding-bottom: 2rem;
 }
 
 .breadcrumb-link {
@@ -353,7 +356,7 @@ header .navigation .nav-link:hover {
   }
 }
 #hero {
-  background: var(--color-hero-gradient);
+  background: var(--background-gradient-two);
   padding-inline: 1rem;
   height: 520px;
 }
@@ -548,7 +551,7 @@ header .navigation .nav-link:hover {
 }
 #brands {
   display: none;
-  background-color: var(--color-bg);
+  background: var(--background-gradient-one);
   padding-top: 1rem;
 }
 #brands .brand-box {
@@ -592,7 +595,7 @@ header .navigation .nav-link:hover {
 }
 #features {
   padding-bottom: 7rem;
-  background-color: var(--color-bg);
+  background: var(--background-gradient-two);
 }
 #features .item {
   padding: 1rem;
@@ -703,7 +706,7 @@ header .navigation .nav-link:hover {
   text-align: center;
   padding-inline: 1rem;
   padding-bottom: 5rem;
-  background-color: var(--color-grey100);
+  background: var(--background-gradient-one);
 }
 #HDIW .HDIWdesktop, #HDIW .HDIWtablet {
   display: none;
@@ -757,7 +760,7 @@ header .navigation .nav-link:hover {
   }
 }
 #info {
-  background-color: var(--color-bg);
+  background: var(--background-gradient-two);
   display: none;
   padding-top: 5rem;
 }
@@ -868,7 +871,7 @@ header .navigation .nav-link:hover {
 }
 #review {
   display: none;
-  background-color: var(--color-grey100);
+  background: var(--background-gradient-one);
   height: 542px;
   align-items: center;
 }
@@ -938,7 +941,7 @@ header .navigation .nav-link:hover {
   padding-top: 3rem;
   padding-bottom: 3rem;
   margin: 1rem;
-  background-color: var(--color-bg);
+  background: var(--color-bg);
 }
 #faq .header {
   grid-area: header;
@@ -1289,4 +1292,102 @@ footer .footer-container {
     max-width: var(--desktop-width);
     margin: var(--desktop-margin);
   }
+}
+.top {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 600px;
+  background: var(--background-gradient-two);
+}
+
+.contactUs {
+  margin: var(--desktop-margin);
+}
+.contactUs h1 {
+  padding-top: 4rem;
+  padding-left: 2rem;
+}
+.contactUs .icon {
+  margin-top: 0.5rem;
+  background-color: var(--color-icon-background);
+  color: var(--color-primary);
+  border-radius: 50%;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+}
+.contactUs .text {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 20rem;
+}
+.contactUs .text a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+.contactUs .text a:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+.contactUs .email, .contactUs .careers {
+  margin-top: 5rem;
+  margin-bottom: 2rem;
+  display: flex;
+  gap: 2rem;
+}
+
+.consultation {
+  padding-top: 5rem;
+  width: 640px;
+  height: 720px;
+}
+.consultation .card {
+  border: 1px solid var(--color-primary);
+  border-radius: 0.5rem;
+  background-color: var(--color-bg);
+  box-shadow: 0px 0px 100px rgba(99, 101, 241, 0.1450980392);
+}
+.consultation h1 {
+  display: flex;
+  justify-content: center;
+  margin-top: 5rem;
+}
+.consultation .input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 4rem 5rem;
+  font-size: 1.2rem;
+}
+.consultation .form-input {
+  border: 1px solid var(--color-grey400);
+  border-radius: 10px;
+  height: 52px;
+  font-size: 1.1rem;
+  padding-left: 1rem;
+}
+.consultation .appointment {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  padding: 12px 25px;
+  width: 500px;
+  height: 52px;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 3rem;
+  margin-left: 5rem;
+}
+
+.location {
+  height: 50rem;
+}
+
+.location {
+  background: var(--background-gradient-one);
 }

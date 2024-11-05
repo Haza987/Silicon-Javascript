@@ -1,12 +1,12 @@
 .breadcrumb-container {
-  background: var(--color-breadcrumb-gradient);
+  background: var(--color-header-bg);
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: left;
   gap: 2rem;
-  padding: 2rem;
-  margin-bottom: 1rem;
+  padding-left: 7.5rem;
+  padding-bottom: 2rem;
 }
 
 .breadcrumb-link {
