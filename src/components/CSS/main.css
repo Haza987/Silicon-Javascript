@@ -1020,6 +1020,13 @@ header .navigation .nav-link:hover {
 }
 #faq .contactus {
   grid-area: contact;
+  margin-top: 3rem;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 25px;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
 }
 #faq .faq-block {
   grid-area: faq;
@@ -1382,6 +1389,7 @@ footer .footer-container {
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
   border-radius: 8px;
   padding: 12px 25px;
   height: 52px;

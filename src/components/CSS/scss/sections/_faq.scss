@@ -49,14 +49,12 @@
       .nav-link{
         color: var(--color-primary);
         font-weight: 600;
-        text-decoration: none;
-        
+        text-decoration: none;        
       }
       
       .nav-link:hover {
         color: var(--color-primary-clicked);
-        text-decoration: underline;
-        
+        text-decoration: underline;  
       }
     }
 
@@ -101,7 +99,13 @@
 
   .contactus {
     grid-area: contact;
-    
+    margin-top: 3rem;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 25px;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
   }
 
   .faq-block{
