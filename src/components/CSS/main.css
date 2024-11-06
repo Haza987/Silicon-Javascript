@@ -1506,7 +1506,7 @@ footer .footer-container {
   #contact .main-container .top {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    background: var(--background-gradient-two);
+    background: var(--background-gradient-one);
   }
   #contact .main-container .contactUs {
     text-align: left;
@@ -1532,7 +1532,7 @@ footer .footer-container {
     margin-inline: 5rem;
   }
   #contact .main-container .location {
-    background: var(--background-gradient-one);
+    background: var(--background-gradient-two);
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding-top: 14rem;

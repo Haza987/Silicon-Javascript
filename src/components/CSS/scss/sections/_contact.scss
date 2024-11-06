@@ -249,7 +249,7 @@
       .top {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        background: var(--background-gradient-two);
+        background: var(--background-gradient-one);
       }
   
       .contactUs{
@@ -283,7 +283,7 @@
       }
       
       .location {
-        background: var(--background-gradient-one);
+        background: var(--background-gradient-two);
         display: grid;
         grid-template-columns: 1fr 1fr;
         padding-top: 14rem;

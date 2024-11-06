@@ -36,19 +36,19 @@ const ImageSwitch = () => {
     <div className="downloadbuttons"> 
       {theme === "light" ? (
         <>
-          <a href="https://apps.apple.com/us/app/silicon-info/id1542271266?mt=12" className="app">
+          <a href="https://apps.apple.com/us/app/silicon-info/id1542271266?mt=12" target='_blank' className="app">
             <img src="/src/Images/FPImages/appstore.svg" alt="App Store" />
           </a>
-          <a href="https://play.google.com/store/search?q=silicon&c=apps&hl=en" className="app">
+          <a href="https://play.google.com/store/search?q=silicon&c=apps&hl=en" target='_blank' className="app">
             <img src="/src/Images/FPImages/googleplay.svg" alt="Google Play" />
           </a>
         </>
       ) : (
         <>
-          <a href="https://apps.apple.com/us/app/silicon-info/id1542271266?mt=12" className="app-dark">
+          <a href="https://apps.apple.com/us/app/silicon-info/id1542271266?mt=12" target='_blank' className="app-dark">
             <img src="/src/Images/FPImages/appstore-dark.svg" alt="App Store Dark" />
           </a>
-          <a href="https://play.google.com/store/search?q=silicon&c=apps&hl=en" className="app-dark">
+          <a href="https://play.google.com/store/search?q=silicon&c=apps&hl=en" target='_blank' className="app-dark">
             <img src="/src/Images/FPImages/googleplay-dark.svg" alt="Google Play Dark" />
           </a>
         </>
