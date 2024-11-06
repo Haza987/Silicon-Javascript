@@ -10,14 +10,18 @@ const Contact = () => {
     <>
       <Breadcrumb/>
 
-        <div className="top">
-          <ContactUs/>
-          <Consultation/>
-        </div>
+        <div id='contact'>
+          <div className="main-container">
+            <div className="top">
+              <ContactUs/>
+              <Consultation/>
+            </div>
 
-        <div className="location">
-          <Map/>
-          <MedicalCenters/>
+            <div className="location">
+              <Map/>
+              <MedicalCenters/>
+            </div>
+          </div>
         </div>
         
     </>

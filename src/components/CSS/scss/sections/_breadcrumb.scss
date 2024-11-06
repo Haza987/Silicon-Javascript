@@ -3,10 +3,10 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: left;
+  align-items: center;
   gap: 2rem;
-  padding-left: 7.5rem;
-  padding-bottom: 2rem;
+  padding-bottom: 5rem;
+  
 }
 
 .breadcrumb-link {
@@ -27,6 +27,23 @@ ul {
   display: flex;
   flex-direction: row;
   list-style: none;
-  gap: 2rem;
-  
+  gap: 2rem; 
+}
+
+@media (min-width: 768px) {
+
+}
+
+
+@media (min-width: 1400px) {
+  .breadcrumb-container{
+    width: auto;
+    margin: auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 7.5rem;
+  }
 }

@@ -127,10 +127,9 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: left;
+  align-items: center;
   gap: 2rem;
-  padding-left: 7.5rem;
-  padding-bottom: 2rem;
+  padding-bottom: 5rem;
 }
 
 .breadcrumb-link {
@@ -152,6 +151,17 @@ ul {
   gap: 2rem;
 }
 
+@media (min-width: 1400px) {
+  .breadcrumb-container {
+    width: auto;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 7.5rem;
+  }
+}
 header {
   /* logo */
   /* end of logo */
@@ -1293,21 +1303,24 @@ footer .footer-container {
     margin: var(--desktop-margin);
   }
 }
-.top {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  height: 600px;
+#contact {
   background: var(--background-gradient-two);
 }
-
-.contactUs {
-  margin: var(--desktop-margin);
+#contact .main-container .top {
+  padding: 1rem;
 }
-.contactUs h1 {
-  padding-top: 4rem;
-  padding-left: 2rem;
+#contact .main-container .contactUs {
+  padding: 1rem;
 }
-.contactUs .icon {
+#contact .main-container .contactUs h1 {
+  text-align: center;
+}
+#contact .main-container .contactUs .container {
+  display: flex;
+  gap: 2rem;
+  padding-bottom: 2rem;
+}
+#contact .main-container .contactUs .icon {
   margin-top: 0.5rem;
   background-color: var(--color-icon-background);
   color: var(--color-primary);
@@ -1319,110 +1332,191 @@ footer .footer-container {
   width: 60px;
   height: 60px;
 }
-.contactUs .text {
+#contact .main-container .contactUs .text {
   display: flex;
   flex-direction: column;
   gap: 1rem;
   width: 20rem;
 }
-.contactUs .text a {
+#contact .main-container .contactUs .text a {
   color: var(--color-primary);
   text-decoration: none;
 }
-.contactUs .text a:hover {
+#contact .main-container .contactUs .text a:hover {
   cursor: pointer;
   text-decoration: underline;
 }
-.contactUs .email, .contactUs .careers {
-  margin-top: 5rem;
-  margin-bottom: 2rem;
-  display: flex;
-  gap: 2rem;
+#contact .main-container .contactUs .email {
+  margin-top: 3rem;
 }
-
-.consultation {
-  padding-top: 5rem;
-  width: 640px;
-  height: 720px;
+#contact .main-container .consultation {
+  padding-block: 5rem;
 }
-.consultation .card {
+#contact .main-container .consultation .card {
   border: 1px solid var(--color-primary);
   border-radius: 0.5rem;
   background-color: var(--color-bg);
   box-shadow: 0px 0px 100px rgba(99, 101, 241, 0.1450980392);
+  margin-inline: 1rem;
 }
-.consultation h1 {
+#contact .main-container .consultation h1 {
   display: flex;
-  justify-content: center;
-  margin-top: 5rem;
+  text-align: center;
+  margin-top: 2rem;
 }
-.consultation .input-group {
+#contact .main-container .consultation .input-group {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  margin: 4rem 5rem;
+  margin: 4rem 2rem;
   font-size: 1.2rem;
 }
-.consultation .form-input {
+#contact .main-container .consultation .form-input {
   border: 1px solid var(--color-grey400);
   border-radius: 10px;
   height: 52px;
   font-size: 1.1rem;
   padding-left: 1rem;
 }
-.consultation .appointment {
+#contact .main-container .consultation .appointment {
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 8px;
   padding: 12px 25px;
-  width: 500px;
   height: 52px;
   font-size: 14px;
   font-weight: 600;
   margin-bottom: 3rem;
-  margin-left: 5rem;
+  margin-inline: 5rem;
 }
-
-.location {
+#contact .main-container .location {
   background: var(--background-gradient-one);
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  padding-top: 20rem;
-  margin-bottom: 5rem;
+  margin-bottom: 3rem;
 }
-.location .map {
-  margin: var(--desktop-margin);
+#contact .main-container .location .map {
+  display: none;
 }
-.location .map .map-placement {
-  transform: scale(0.9);
+#contact .main-container .location .medCenters {
+  padding-inline: 1rem;
 }
-.location .medCenters {
-  padding-left: 2rem;
+#contact .main-container .location .medCenters h2 {
+  text-align: center;
 }
-.location .medCenters .medCenter1, .location .medCenters .medCenter2 {
-  padding-top: 4rem;
+#contact .main-container .location .medCenters .medCenter1, #contact .main-container .location .medCenters .medCenter2 {
+  padding-top: 2rem;
 }
-.location .medCenters .medCenter1 .address, .location .medCenters .medCenter1 .number, .location .medCenters .medCenter1 .openingTimes, .location .medCenters .medCenter2 .address, .location .medCenters .medCenter2 .number, .location .medCenters .medCenter2 .openingTimes {
+#contact .main-container .location .medCenters .medCenter1 .address, #contact .main-container .location .medCenters .medCenter1 .number, #contact .main-container .location .medCenters .medCenter1 .openingTimes, #contact .main-container .location .medCenters .medCenter2 .address, #contact .main-container .location .medCenters .medCenter2 .number, #contact .main-container .location .medCenters .medCenter2 .openingTimes {
   display: flex;
   padding-top: 1rem;
+  align-items: center;
 }
-.location .medCenters .medCenter1 .address, .location .medCenters .medCenter2 .address {
+#contact .main-container .location .medCenters .medCenter1 .address, #contact .main-container .location .medCenters .medCenter2 .address {
   gap: 1.5rem;
 }
-.location .medCenters .medCenter1 .number, .location .medCenters .medCenter2 .number {
+#contact .main-container .location .medCenters .medCenter1 .number, #contact .main-container .location .medCenters .medCenter2 .number {
   gap: 1rem;
 }
-.location .medCenters .medCenter1 .openingTimes, .location .medCenters .medCenter2 .openingTimes {
+#contact .main-container .location .medCenters .medCenter1 .openingTimes, #contact .main-container .location .medCenters .medCenter2 .openingTimes {
   gap: 1rem;
 }
-.location .medCenters .medCenter1 .openingTimes p, .location .medCenters .medCenter2 .openingTimes p {
+#contact .main-container .location .medCenters .medCenter1 .openingTimes p, #contact .main-container .location .medCenters .medCenter2 .openingTimes p {
   flex-direction: row;
   padding-bottom: 0.1rem;
 }
-.location .medCenters i {
+#contact .main-container .location .medCenters i {
   color: var(--color-primary);
 }
-.location .medCenters .bold-text {
+#contact .main-container .location .medCenters .bold-text {
   font-weight: 800;
+}
+#contact .main-container .location .medCenters .brands {
+  display: flex;
+  padding-block: 2.5rem;
+  gap: 1.5rem;
+  justify-content: center;
+}
+#contact .main-container .location .medCenters .brands .fa-brands {
+  background-color: var(--color-icon-background);
+  border-radius: 8px;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+}
+#contact .main-container .location .medCenters .brands .link {
+  text-decoration: none;
+}
+#contact .main-container .location .medCenters .brands .link:hover .fa-brands {
+  background-color: var(--color-primary);
+  color: white;
+}
+#contact .main-container .location .medCenters .brands .link:active {
+  background-color: var(--color-primary-clicked);
+  border-radius: 8px;
+}
+
+@media (min-width: 1400px) {
+  #contact .main-container .top {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: var(--background-gradient-two);
+  }
+  #contact .main-container .contactUs {
+    text-align: left;
+  }
+  #contact .main-container .contactUs h1 {
+    padding-top: 4rem;
+    padding-left: 2rem;
+  }
+  #contact .main-container .contactUs .container {
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+    display: flex;
+    gap: 2rem;
+  }
+  #contact .main-container .consultation {
+    padding-top: 5rem;
+    width: 640px;
+    height: 720px;
+  }
+  #contact .main-container .consultation .card {
+    margin-inline: 0;
+  }
+  #contact .main-container .consultation h1 {
+    justify-content: center;
+  }
+  #contact .main-container .consultation .input-group {
+    margin-inline: 5rem;
+  }
+  #contact .main-container .location {
+    background: var(--background-gradient-one);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 14rem;
+    margin-bottom: 5rem;
+  }
+  #contact .main-container .location .map {
+    display: block;
+    margin: var(--desktop-margin);
+  }
+  #contact .main-container .location .map .map-placement {
+    transform: scale(0.9);
+  }
+  #contact .main-container .location .medCenters {
+    padding-left: 2rem;
+  }
+  #contact .main-container .location .medCenters h2 {
+    text-align: left;
+  }
+  #contact .main-container .location .medCenters .brands {
+    padding-block: 2rem;
+    gap: 2rem;
+  }
+  #content .main-container {
+    max-width: var(--desktop-width);
+    margin: var(--desktop-margin);
+  }
 }
