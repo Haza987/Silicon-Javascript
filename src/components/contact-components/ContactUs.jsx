@@ -2,10 +2,7 @@ import React from 'react'
 
 const ContactUs = () => {
   return (
-    <div className="contactUs">
-        
-      <h1>Contact Us</h1>
-
+    <div className="contactUs">       
       <div className="email">
         <div className="container">
           <div className="icon">

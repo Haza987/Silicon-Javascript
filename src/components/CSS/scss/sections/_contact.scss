@@ -8,12 +8,12 @@
       padding: 1rem;
     }
     
+    h1 {
+      text-align: center;
+    }
     .contactUs {
       padding: 1rem;
       
-      h1 {
-        text-align: center;
-      }
     
       .container {
         display: flex;
@@ -118,7 +118,7 @@
         h2{
           text-align: center;
         }
-                
+        
         .medCenter1, .medCenter2{
           padding-top: 2rem;
       
@@ -129,22 +129,10 @@
             align-items: center;
 
           }
-      
-          .address {
-            gap: 1.5rem;
-          }
-      
-          .number {
-            gap: 1rem;
-          }
-      
-          .openingTimes {
-            gap: 1rem;
-      
-            p{
-              flex-direction: row;
-              padding-bottom: .1rem;
-            }
+
+          .fa-regular{
+            width: 1.5rem;
+            margin-right: .5rem;
           }
         }
       
@@ -187,8 +175,7 @@
               background-color: var(--color-primary-clicked);
               border-radius: 8px;
             }
-          }
-    
+          }   
         }
       }
     }
@@ -196,7 +183,63 @@
 }
 
 @media (min-width: 768px) {
+  #contact{
+    .contactUs{      
+      text-align: left;
+            
+      .container {
+        margin-bottom: 2rem;
+        display: flex;
+        gap: 2rem;
+        justify-content: center;
+        align-items: center;
+      }    
+    }
+    
+    .consultation {
+      padding-top: 5rem;
+      
+      
+      .card {
+        margin-inline: 0;
+      }
+      
+      h1{
+        justify-content: center;
+      }
+    
+      .input-group {
+        margin-inline: 5rem;
+      }
+    }
 
+    .location {
+      background: var(--background-gradient-one);
+      padding-top: 4rem;
+      margin-bottom: 5rem;
+      
+      .medCenters{
+        padding-left: 2rem;
+        max-width: 400px;
+        margin-inline: auto;
+
+        .address, .number, .openingTimes{
+          display: flex;
+          align-items: center;
+          gap: .5rem;
+        }
+
+        h2{
+          text-align: left;
+        }
+    
+        .brands {
+          padding-block: 2rem;
+          gap: 2rem;     
+        }
+      }
+    }
+  }
 }
 
 
@@ -208,16 +251,11 @@
         grid-template-columns: 1fr 1fr;
         background: var(--background-gradient-two);
       }
-      
+  
       .contactUs{
         
         text-align: left;
       
-        h1 {
-          padding-top: 4rem;
-          padding-left: 2rem;
-        }
-    
         .container {
           margin-top: 5rem;
           margin-bottom: 2rem;
@@ -259,9 +297,10 @@
             transform: scale(0.9);
           }
         }
-        
         .medCenters{
           padding-left: 2rem;
+          max-width: none;
+          margin-inline: 0;
 
           h2{
             text-align: left;
@@ -269,7 +308,8 @@
       
           .brands {
             padding-block: 2rem;
-            gap: 2rem;     
+            gap: 2rem;
+            justify-content: left;
           }
         }
       }
