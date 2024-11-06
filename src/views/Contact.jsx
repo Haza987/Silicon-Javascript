@@ -2,6 +2,8 @@ import React from 'react'
 import Breadcrumb from '../components/global-components/Breadcrumb'
 import ContactUs from '../components/contact-components/ContactUs'
 import Consultation from '../components/contact-components/Consultation'
+import Map from '../components/contact-components/Map'
+import MedicalCenters from '../components/contact-components/MedicalCenters'
 
 const Contact = () => {
   return (
@@ -14,7 +16,8 @@ const Contact = () => {
         </div>
 
         <div className="location">
-          
+          <Map/>
+          <MedicalCenters/>
         </div>
         
     </>

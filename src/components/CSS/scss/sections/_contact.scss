@@ -102,10 +102,57 @@
   }
 }
 
-.location{
-  height: 50rem;
-}
-
 .location {
   background: var(--background-gradient-one);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-top: 20rem;
+  margin-bottom: 5rem;
+
+  .map {
+    margin: var(--desktop-margin);
+    
+    .map-placement{
+      transform: scale(0.9);
+    }
+  }
+  
+  .medCenters{
+    padding-left: 2rem;
+    
+    .medCenter1, .medCenter2{
+      padding-top: 4rem;
+  
+      .address, .number, .openingTimes{
+        display: flex;
+        padding-top: 1rem;
+      }
+  
+      .address {
+        gap: 1.5rem;
+      }
+  
+      .number {
+        gap: 1rem;
+      }
+  
+      .openingTimes {
+        gap: 1rem;
+  
+        p{
+          flex-direction: row;
+          padding-bottom: .1rem;
+        }
+      }
+    }
+  
+    i {
+      color: var(--color-primary);
+    }
+  
+    .bold-text{
+      font-weight: 800;
+    }
+  }
 }
+

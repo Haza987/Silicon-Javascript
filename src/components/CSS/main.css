@@ -1385,9 +1385,44 @@ footer .footer-container {
 }
 
 .location {
-  height: 50rem;
-}
-
-.location {
   background: var(--background-gradient-one);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-top: 20rem;
+  margin-bottom: 5rem;
+}
+.location .map {
+  margin: var(--desktop-margin);
+}
+.location .map .map-placement {
+  transform: scale(0.9);
+}
+.location .medCenters {
+  padding-left: 2rem;
+}
+.location .medCenters .medCenter1, .location .medCenters .medCenter2 {
+  padding-top: 4rem;
+}
+.location .medCenters .medCenter1 .address, .location .medCenters .medCenter1 .number, .location .medCenters .medCenter1 .openingTimes, .location .medCenters .medCenter2 .address, .location .medCenters .medCenter2 .number, .location .medCenters .medCenter2 .openingTimes {
+  display: flex;
+  padding-top: 1rem;
+}
+.location .medCenters .medCenter1 .address, .location .medCenters .medCenter2 .address {
+  gap: 1.5rem;
+}
+.location .medCenters .medCenter1 .number, .location .medCenters .medCenter2 .number {
+  gap: 1rem;
+}
+.location .medCenters .medCenter1 .openingTimes, .location .medCenters .medCenter2 .openingTimes {
+  gap: 1rem;
+}
+.location .medCenters .medCenter1 .openingTimes p, .location .medCenters .medCenter2 .openingTimes p {
+  flex-direction: row;
+  padding-bottom: 0.1rem;
+}
+.location .medCenters i {
+  color: var(--color-primary);
+}
+.location .medCenters .bold-text {
+  font-weight: 800;
 }
