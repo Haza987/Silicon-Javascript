@@ -5,6 +5,7 @@ const Consultation = () => {
  
   const [formData, setFormData] = useState({ fullName: '', email: '', specialist: '', })
   const [errors, setErrors] = useState({})
+  const [success, setSuccess] = useState('')
 
   const validateField = (name, value) => {
     let error = ''
@@ -49,28 +50,46 @@ const Consultation = () => {
     validateField(name, value)
   }
 
+
+
   const handleSubmit = async (e) => {
     (e).preventDefault();
 
+    setSuccess('')
+
     if (validateForm()) {
       console.log('form valid')
-      
-      // const res = await fetch('https://win24-assignment.azurewebsites.net/api/forms/contact', {
-      //   method: 'post',
-      //   headers: {
-      //     'Content-type': 'application/json'
-      //   },
-      //   body: JSON.stringify(formData)
-      // })
 
-      // if (res.ok) {
-      //   const data = await res.json();
-      //   console.log('response:',data)
-      // } else {
-      //   console.log('error code: ' , res.status)
-      //   const errorData = await res.json();
-      //   console.error('Error response:', errorData);
-      // }     
+      const specialistId = document.getElementById('dropdownMenu')
+      const specialistName = specialistId.options[specialistId.selectedIndex].text;
+
+      
+      const res = await fetch('https://win24-assignment.azurewebsites.net/api/forms/contact', {
+        method: 'post',
+        headers: {
+          'Content-type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+
+      })
+
+      console.log('Appointment Request: ' , {...formData, specialist: specialistName})
+  
+      if (!res.ok) {
+        console.log('error code: ' , res.status)
+        const errorData = await res.json();
+        console.error('Error response:', errorData);
+      } else {
+        setSuccess('Your appointment request has been sent successfully!');
+        const contentType = res.headers.get("content-type")   
+        let data
+
+        if (contentType && contentType.includes("application/json")) {
+          const data = await res.json();
+        } else {
+          const data = await res.text();
+        }
+      }
     } else {
       console.log('form invalid')
     }
@@ -88,24 +107,26 @@ const Consultation = () => {
         <form className="consultation-form" onSubmit={handleSubmit} noValidate>
           <div className="input-group">
             <label htmlFor="fullName" className="form-label">Full Name</label>
-            <input type="text" name='fullName' className="fullName form-input" placeholder='Full Name' value={formData.fullName} onChange={handleInputChange} required/>
+            <input type="text" name='fullName' id='fullName' className="fullName form-input" placeholder='Full Name' value={formData.fullName} onChange={handleInputChange} required/>
             {errors.fullName && <span className='validation-error'>{errors.fullName}</span>}
           </div>
 
           <div className="input-group">
             <label htmlFor="email" className="form-label">Email Address</label>
-            <input type="email" name='email' className="email form-input" placeholder='Email Address' autoComplete='email' value={formData.email} onChange={handleInputChange} required/>
+            <input type="email" name='email' id='email' className="email form-input" placeholder='Email Address' autoComplete='email' value={formData.email} onChange={handleInputChange} required/>
             {errors.email && <span className='validation-error'>{errors.email}</span>}
           </div>
           
           <div className="input-group">
             <label htmlFor="dropdownMenu">Specialist</label>
-            <DropdownMenu name='specialist' value={formData.specialist} onChange={handleInputChange} required/>
+            <DropdownMenu id="dropdownMenu" name='specialist' value={formData.specialist} onChange={handleInputChange} required/>
             {errors.specialist && <span className='validation-error'>{errors.specialist}</span>}
           </div>
 
           <button type='submit' className='appointment bgc'>Make an appointment</button>
         </form>
+
+        {success && <p className="success-message">{success}</p>}
 
       </div>
     </div>

@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import axios from 'axios'
 
   const SubscribeInput = () => {
 
@@ -14,12 +15,18 @@ import React, { useState } from 'react'
       setSuccess('')
     }
     
-    const handleSubscribe = (e) => {
+    const handleSubscribe = async (e) => {
       e.preventDefault();
       if (validateEmail(input)) {
-        console.log(input)
+        console.log('Email subscribed:',input)
         setError('')
         setSuccess('You have subscribed to our newsletter!')
+
+        const res = await axios.post('https://win24-assignment.azurewebsites.net/api/forms/subscribe', {email: input})
+
+        if(res.status !== 200) {
+          console.log(res.data)
+        }
       }
     }
 
