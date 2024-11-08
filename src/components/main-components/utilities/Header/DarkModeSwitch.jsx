@@ -1,31 +1,9 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext} from 'react'
+import { DarkModeContext } from './DarkModeContext'
 
 const DarkModeSwitch = () => {
-  const [isDarkMode, setIsDarkMode] = useState(false)
 
-  const toggleDarkMode = () => {
-    const newMode = !isDarkMode;
-    setIsDarkMode(newMode)
-
-    if (newMode) {
-      document.documentElement.setAttribute('data-theme', 'dark')
-      localStorage.setItem('theme', 'dark')
-    } else {
-      document.documentElement.setAttribute('data-theme', 'light')
-      localStorage.setItem('theme', 'light')
-    }
-  };
-
-  useEffect(() => {
-    const savedTheme = localStorage.getItem('theme')
-    if (savedTheme === 'dark') {
-      document.documentElement.setAttribute('data-theme', 'dark')
-      setIsDarkMode(true)
-    } else {
-      document.documentElement.setAttribute('data-theme', 'light')
-      setIsDarkMode(false)
-    }
-  }, [])
+  const {isDarkMode, toggleDarkMode} = useContext(DarkModeContext)
 
   return (
     <div className="btn-toggle-switch">
