@@ -1309,10 +1309,8 @@ footer .footer-container {
     margin: var(--desktop-margin);
   }
 }
-#contact {
-  background: var(--background-gradient-two);
-}
 #contact .main-container .top {
+  background: var(--background-gradient-two);
   padding: 1rem;
 }
 #contact .main-container h1 {
@@ -1367,7 +1365,7 @@ footer .footer-container {
 }
 #contact .main-container .consultation h1 {
   display: flex;
-  text-align: center;
+  justify-content: center;
   margin-top: 2rem;
 }
 #contact .main-container .consultation .input-group {
@@ -1494,7 +1492,7 @@ footer .footer-container {
     margin-inline: 5rem;
   }
   #contact .consultation .appointment {
-    width: 75% !important;
+    width: 80% !important;
   }
   #contact .location {
     padding-top: 4rem;
@@ -1547,10 +1545,9 @@ footer .footer-container {
     margin-inline: 5rem;
   }
   #contact .main-container .location {
-    background: var(--background-gradient-one);
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding-top: 14rem;
+    padding-top: 10rem;
     margin-bottom: 5rem;
   }
   #contact .main-container .location .map {

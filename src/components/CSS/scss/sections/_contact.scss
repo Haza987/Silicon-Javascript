@@ -1,10 +1,10 @@
 #contact{
 
-  background: var(--background-gradient-two);
   
   .main-container{
     
     .top {
+      background: var(--background-gradient-two);
       padding: 1rem;
     }
     
@@ -69,7 +69,7 @@
       
       h1{
         display: flex;
-        text-align: center;
+        justify-content: center;
         margin-top: 2rem;
       }
     
@@ -229,7 +229,7 @@
       }
       
       .appointment {
-        width: 75% !important; 
+        width: 80% !important; 
       }
 
     }
@@ -302,10 +302,9 @@
       }
       
       .location {
-        background: var(--background-gradient-one);
         display: grid;
         grid-template-columns: 1fr 1fr;
-        padding-top: 14rem;
+        padding-top: 10rem;
         margin-bottom: 5rem;
       
         .map {
